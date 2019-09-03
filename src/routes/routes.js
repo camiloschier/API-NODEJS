@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
   });
 });
 
-//  OBTENER SORTEOS DE UNA FECHA
-router.get('/:fecha', (req, res) => {
-  const { fecha } = req.params;
-  mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ?', [fecha], (err, rows, fields) => {
+//  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
+router.get('/', (req, res) => {
+  const { fecha, quiniela, loteria } = req.body;
+  mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ? AND cod_de_quin= ? AND cod_de_lot= ?' , [fecha, quiniela, loteria], (err, rows, fields) => {
     if (!err) {
       res.json(rows);
     } else {
