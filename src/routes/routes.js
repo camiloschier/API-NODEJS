@@ -4,15 +4,15 @@ const router = express.Router();
 const mysqlConnection  = require('../database.js');
 
 // OBTENER TODOS LOS NUMEROS
-router.get('/', (req, res) => {
-  mysqlConnection.query('SELECT * FROM loteria_chaco WHERE id=27000', (err, rows, fields) => {
-    if(!err) {
-      res.json(rows);
-    } else {
-      console.log(err);
-    }
-  });
-});
+// router.get('/', (req, res) => {
+//   mysqlConnection.query('SELECT * FROM loteria_chaco WHERE id=27000', (err, rows, fields) => {
+//     if(!err) {
+//       res.json(rows);
+//     } else {
+//       console.log(err);
+//     }
+//   });
+// });
 
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
 router.get('/', (req, res) => {
