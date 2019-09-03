@@ -15,9 +15,14 @@ const mysqlConnection  = require('../database.js');
 // });
 
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
-router.get('/', (req, res) => {
-  const { fecha, quiniela, loteria } = req.body;
+router.get('/:fecha/:quiniela/:loteria', (req, res) => {
+  // const { fecha, quiniela, loteria } = req.body;
+  const fecha = req.params.fecha;
+  const quiniela = req.params.quiniela;
+  const loteria = req.params.loteria;
+  // console.log("BODY",fecha);
   mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ? AND cod_de_quin= ? AND cod_de_lot= ?' , [fecha, quiniela, loteria], (err, rows, fields) => {
+    console.log()
     if (!err) {
       res.json(rows);
     } else {
