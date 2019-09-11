@@ -37,7 +37,7 @@ router.get('/:fecha/:quiniela/:loteria', (req, res) => {
       console.log(err);
     }
   });
-  mysqlConnection.end();
+  // mysqlConnection.end();
 });
 
 module.exports = router;
