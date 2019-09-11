@@ -22,7 +22,7 @@ router.get('/:fecha/:quiniela/:loteria', (req, res) => {
   const quiniela = req.params.quiniela;
   const loteria = req.params.loteria;
   console.log("BODY",fecha,"QUINIELA",quiniela, "Loteria", loteria);
-  mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ? AND cod_de_quin= ? AND cod_de_lot= ?' , [fecha, quiniela, loteria], (err, rows, fields) => {
+  mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ? AND den_de_quin= ? AND den_de_lot= ?' , [fecha, quiniela, loteria], (err, rows, fields) => {
     console.log()
     if (!err) {
       res.json(rows);
