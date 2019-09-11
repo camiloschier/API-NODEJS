@@ -17,6 +17,14 @@ const mysqlConnection  = require('../database.js');
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
 router.get('/:fecha/:quiniela/:loteria', (req, res) => {
   // const { fecha, quiniela, loteria } = req.body;
+  mysqlConnection.connect(function (err) {
+    if (err) {
+      console.error(err);
+      return;
+    } else {
+      console.log('db is connected');
+    }
+  });
   const fecha = req.params.fecha;
   const quiniela = req.params.quiniela;
   const loteria = req.params.loteria;
@@ -29,6 +37,7 @@ router.get('/:fecha/:quiniela/:loteria', (req, res) => {
       console.log(err);
     }
   });
+  mysqlConnection.close();
 });
 
 module.exports = router;
