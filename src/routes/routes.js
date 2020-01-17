@@ -18,7 +18,7 @@ const app = express();
 app.use(bodyParser.json())
 router.post('/lead', function (req, res) {
   var persona = req.body;
-  console.log("cards", persona)
+  console.log("cards", persona.persona)
   res.send("Exito")
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
