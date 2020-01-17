@@ -17,8 +17,7 @@ const app = express();
 // });
 app.use(bodyParser.json())
 router.post('/lead', function (req, res) {
-  var cards = req.body.cards
-  console.log(bodyParser.json())
+  var cards = req.body;
   res.send("Body:", cards)
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
