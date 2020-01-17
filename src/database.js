@@ -4,7 +4,7 @@ const mysqlConnection = mysql.createConnection({
   host: 'magnetycs.com',
   user: 'magnetyc_cliente',
   password: 'desarrolloweb',
-  database: 'magnetycs_leads',
+  database: 'magnetyc_leads',
   multipleStatements: true
 });
 
