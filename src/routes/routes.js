@@ -13,8 +13,8 @@ const mysqlConnection  = require('../database.js');
 //     }
 //   });
 // });
-router.get('/', function (req, res) {
-  res.send('Wiki home page');
+router.post('/about', function (req, res) {
+  res.send('About this wiki');
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
 router.get('/:fecha/:quiniela/:loteria', (req, res) => {
