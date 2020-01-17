@@ -3,7 +3,7 @@ const mysql = require('mysql');
 const mysqlConnection = mysql.createConnection({
   host: 'magnetycs.com',
   user: 'magnetyc_cliente',
-  password: 'desarrolloweb',
+  password: 'desarrollowedsab',
   database: 'magnetycs_leads',
   multipleStatements: true
 });
