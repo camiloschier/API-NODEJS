@@ -3,6 +3,7 @@ const router = express.Router();
 const mysqlConnection  = require('../database.js');
 
 const bodyParser = require('body-parser');
+const app = express();
 
 
 // OBTENER TODOS LOS NUMEROS
