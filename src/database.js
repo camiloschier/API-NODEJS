@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+
 const mysqlConnection = mysql.createConnection({
   host: 'magnetycs.com',
   user: 'magnetyc_cliente',

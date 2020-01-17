@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
 const mysqlConnection  = require('../database.js');
+
+const bodyParser = require('body-parser');
+const app = express();
 
 // OBTENER TODOS LOS NUMEROS
 // router.get('/', (req, res) => {
@@ -13,8 +15,11 @@ const mysqlConnection  = require('../database.js');
 //     }
 //   });
 // });
+app.use(bodyParser.json())
 router.post('/lead', function (req, res) {
-  res.send('About this wiki');
+  var cards = req.body.cards
+  console.log(bodyParser.json())
+  res.send("Body:", cards)
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
 router.get('/:fecha/:quiniela/:loteria', (req, res) => {
