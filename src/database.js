@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const mysqlConnection = mysql.createConnection({
-  host: '200.69.212.65',
-  user: 'loteChAco',
-  password: 'ChAcoLote!',
-  database: 'ivr',
+  host: 'magnetycs.com',
+  user: 'magnetyc_cliente',
+  password: 'desarrolloweb',
+  database: 'magnetycs_leads',
   multipleStatements: true
 });
 

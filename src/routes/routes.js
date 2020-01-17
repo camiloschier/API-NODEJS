@@ -13,7 +13,7 @@ const mysqlConnection  = require('../database.js');
 //     }
 //   });
 // });
-router.post('/about', function (req, res) {
+router.post('/lead', function (req, res) {
   res.send('About this wiki');
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
