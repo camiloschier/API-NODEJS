@@ -1,9 +1,11 @@
 const express = require('express');
+var cors = require('cors');
 const router = express.Router();
 const mysqlConnection  = require('../database.js');
 
 const bodyParser = require('body-parser');
-const app = express();
+const app = express().use("*",cors());
+
 
 // OBTENER TODOS LOS NUMEROS
 // router.get('/', (req, res) => {
