@@ -17,29 +17,28 @@ const app = express();
 // });
 app.use(bodyParser.json())
 router.post('/lead', function (req, res) {
-  var cards = req.body;
-  console.log("cards", cards)
+  var persona = req.body;
+  console.log("cards", persona)
   res.send("Exito")
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
-router.get('/:fecha/:quiniela/:loteria', (req, res) => {
-  // const { fecha, quiniela, loteria } = req.body;
+// router.get('/:fecha/:quiniela/:loteria', (req, res) => {
+//   // const { fecha, quiniela, loteria } = req.body;
 
-  const fecha = req.params.fecha;
-  const quiniela = req.params.quiniela;
-  const loteria = req.params.loteria;
-  console.log("BODY",fecha,"QUINIELA",quiniela, "Loteria", loteria);
-  mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ? AND den_de_quin= ? AND den_de_lot= ?' , [fecha, quiniela, loteria], (err, rows, fields) => {
-    console.log()
-    if (!err) {
-      res.json(rows);
-    } else {
-      console.log(err);
-    }
-  });
-  // mysqlConnection.end();
-});
+//   const fecha = req.params.fecha;
+//   const quiniela = req.params.quiniela;
+//   const loteria = req.params.loteria;
+//   console.log("BODY",fecha,"QUINIELA",quiniela, "Loteria", loteria);
+//   mysqlConnection.query('SELECT *  FROM loteria_chaco WHERE fecha_de_sorteo= ? AND den_de_quin= ? AND den_de_lot= ?' , [fecha, quiniela, loteria], (err, rows, fields) => {
+//     console.log()
+//     if (!err) {
+//       res.json(rows);
+//     } else {
+//       console.log(err);
+//     }
+//   });
+//   // mysqlConnection.end();
+// });
 
-router.post
 
 module.exports = router;
