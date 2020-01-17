@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 router.post('/lead', function (req, res) {
   var cards = req.body;
   console.log("cards", cards)
-  //res.send("Body:", cards)
+  res.send("Exito")
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
 router.get('/:fecha/:quiniela/:loteria', (req, res) => {
