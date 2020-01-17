@@ -21,6 +21,15 @@ router.post('/lead', function (req, res) {
   console.log("Persona", persona);
   console.log("Nombre", persona.nom_ape);
   res.send("Exito")
+  mysqlConnection.query
+  ('INSERT INTO sancor_salud(nom_ape,edad,email,telefono,plan,tipo) VALUES ('+persona.nom_ape+','+persona.edad+','+persona.email+','+persona.telefono+','+persona.plan+','+persona.tipo+')', (err, rows, fields) => {
+    
+    if (!err) {
+      res.json(rows);
+    } else {
+      console.log(err);
+         }
+    });
 })
 //  OBTENER SORTEOS DE UNA FECHA, UNA QUINIELA Y UNA LOTERIA
 // router.get('/:fecha/:quiniela/:loteria', (req, res) => {
