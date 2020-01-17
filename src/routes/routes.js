@@ -22,8 +22,8 @@ router.post('/lead', function (req, res) {
   console.log("Nombre", persona.nom_ape);
   res.send("Exito")
   mysqlConnection.query
-  ('INSERT INTO sancor_salud(nom_ape,edad,email,telefono,plan,tipo) VALUES ('+persona.nom_ape+','+persona.edad+','+persona.email+','+persona.telefono+','+persona.plan+','+persona.tipo+')', (err, rows, fields) => {
-    
+  ("INSERT INTO sancor_salud(nom_ape,edad,email,telefono,plan,tipo) VALUES ('"+persona.nom_ape+"','"+persona.edad+"','"+persona.email+"','"+persona.telefono+"','"+persona.plan+"','"+persona.tipo+"')", (err, rows, fields) => {
+    console.log()
     if (!err) {
       res.json(rows);
     } else {
