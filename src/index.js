@@ -3,6 +3,7 @@ var cors = require('cors');
 const app = express();
 const https = require('https')
 const fs = require('fs');
+var path = require('path');
 
 // Settings
 app.set('port', process.env.PORT || 3000);
@@ -21,8 +22,8 @@ app.use(require('./routes/routes'));
 
 //SSL
 https.createServer({
-  key: fs.readFileSync('../key.pem'),
-  cert: fs.readFileSync('../private.pem'),
+  key: fs.readFileSync(path.resolve('./src/key.pem')),
+  cert: fs.readFileSync(path.resolve('./src/cert.pem')),
   passphrase: 'sancorseguros'
 }, app)
 .listen(app.get('port'));
