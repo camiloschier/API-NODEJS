@@ -4,7 +4,7 @@ const app = express();
 const https = require('https')
 const fs = require('fs');
 var path = require('path');
-
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 // Settings
 app.set('port', process.env.PORT || 3000);
 
