@@ -16,9 +16,9 @@ app.use(express.json());
 app.use(require('./routes/routes'));
 
 // Certificate
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/apimagnetycs.ddns.net/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/apimagnetycs.ddns.net/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/apimagnetycs.ddns.net/fullchain.pem', 'utf8');
 
 const credentials = {
 	key: privateKey,
