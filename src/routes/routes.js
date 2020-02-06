@@ -20,10 +20,10 @@ app.use(bodyParser.json())
 router.post('/lead', function (req, res) {
   var persona = req.body.persona;
   console.log("Persona", persona);
-  console.log("Nombre", persona.nom_ape);
+  console.log("Nombre", persona.nombre);
   // res.send("Exito")
   mysqlConnection.query
-  ("INSERT INTO sancor_salud(nom_ape,edad,email,telefono,plan,tipo) VALUES ('"+persona.nom_ape+"','"+persona.edad+"','"+persona.email+"','"+persona.telefono+"','"+persona.plan+"','"+persona.tipo+"')", (err, rows, fields) => {
+  ("INSERT INTO sancor_salud(nombre,apellido,edad,email,telefono,plan,tipo) VALUES ('"+persona.nombre+"','"+persona.apellido+"','"+persona.edad+"','"+persona.email+"','"+persona.telefono+"','"+persona.plan+"','"+persona.tipo+"')", (err, rows, fields) => {
     console.log()
     if (!err) {
       res.json(rows);
