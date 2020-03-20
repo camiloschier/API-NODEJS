@@ -1,11 +1,19 @@
 const mysql = require('mysql');
 
 
+// const mysqlConnection = mysql.createConnection({
+//   host: 'magnetycs.com',
+//   user: 'magnetyc_cliente',
+//   password: 'desarrolloweb',
+//   database: 'magnetyc_leads',
+//   multipleStatements: true
+// });
+
 const mysqlConnection = mysql.createConnection({
-  host: 'magnetycs.com',
-  user: 'magnetyc_cliente',
+  host: 'http://apimagnetycs.ddns.net/',
+  user: 'admin',
   password: 'desarrolloweb',
-  database: 'magnetyc_leads',
+  database: 'leads',
   multipleStatements: true
 });
 
