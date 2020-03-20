@@ -10,7 +10,7 @@ const mysql = require('mysql');
 // });
 
 const mysqlConnection = mysql.createConnection({
-  host: 'http://apimagnetycs.ddns.net/',
+  host: 'https://apimagnetycs.ddns.net/',
   user: 'admin',
   password: 'desarrolloweb',
   database: 'leads',
